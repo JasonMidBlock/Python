@@ -1,0 +1,47 @@
+Please input a text file for a graph: fileGraph.txt
+(A) A dictionary implementation of the graph. Key: String; value: A set of strings:
+{'A': {'F', 'B', 'C', 'E'}, 'B': {'F', 'C', 'A', 'D'}, 'C': {'E', 'D', 'A', 'B', 'G'}, 'E': {'G', 'C', 'A'}, 'F': {'B', 'A'}, 'D': {'B', 'C'}, 'G': {'E', 'C'}}
+
+(B) The nodal degrees:
+Node A:  4
+Node B:  4
+Node C:  5
+Node E:  3
+Node F:  2
+Node D:  2
+Node G:  2
+
+(C) The set of nodes:
+{'F', 'C', 'E', 'A', 'D', 'B', 'G'}
+The number of nodes is 7.
+
+(D) The set of links:
+{('A', 'F'), ('C', 'D'), ('G', 'C'), ('C', 'A'), ('F', 'B'), ('E', 'C'), ('C', 'G'), ('A', 'E'), ('D', 'B'), ('B', 'C'), ('E', 'A'), ('B', 'A'), ('B', 'D'), ('A', 'B'), ('F', 'A'), ('D', 'C'), ('E', 'G'), ('A', 'C'), ('C', 'E'), ('B', 'F'), ('G', 'E'), ('C', 'B')}
+The number of unidirected links is 11.
+
+(E) The neighbors of the nodes:
+A: {'F', 'B', 'C', 'E'}
+B: {'F', 'C', 'A', 'D'}
+C: {'E', 'D', 'A', 'B', 'G'}
+E: {'G', 'C', 'A'}
+F: {'B', 'A'}
+D: {'B', 'C'}
+G: {'E', 'C'}
+
+(F) Testing connectivity:
+B is connected to A: True
+G is connected to A: False
+
+(G) Deleting nodes:
+Case 1: Deleting node 'Z'
+Error: The node is not in the graph.
+Case 2: Deleting node 'C'
+{'A': {'F', 'B', 'E'}, 'B': {'F', 'A', 'D'}, 'E': {'G', 'A'}, 'F': {'B', 'A'}, 'D': {'B'}, 'G': {'E'}}
+
+(H) Deleting links:
+Case 1: Deleting link C--A
+Error: Not both nodes are in the graph.
+Case 2: Deleting link E--G
+{'A': {'F', 'B', 'E'}, 'B': {'F', 'A', 'D'}, 'E': {'A'}, 'F': {'B', 'A'}, 'D': {'B'}, 'G': set()}
+Case 3: Deleting link F--B
+{'A': {'F', 'B', 'E'}, 'B': {'A', 'D'}, 'E': {'A'}, 'F': {'A'}, 'D': {'B'}, 'G': set()}
